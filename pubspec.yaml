@@ -1,0 +1,122 @@
+name: quote_snap
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+  hooks_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Navigation
+  go_router: ^14.2.0
+
+  # Local DB
+  drift: ^2.16.0
+  sqlite3_flutter_libs: ^0.5.21
+  path_provider: ^2.1.3
+  path: ^1.9.0
+
+  # Firebase
+  firebase_core: ^3.15.2
+  cloud_firestore: ^5.6.12
+  firebase_auth: ^5.1.0
+  google_sign_in: ^6.2.1
+
+  # Core tools
+  shared_preferences: ^2.2.3
+  uuid: ^4.4.0
+  intl: ^0.19.0
+
+  # PDF
+  pdf: ^3.10.10
+  printing: ^5.11.1
+
+  # Media
+  image_picker: ^1.2.1
+  url_launcher: ^6.3.0
+  share_plus: ^12.0.1
+  flutter_slidable: ^3.1.1
+  shimmer: ^3.0.0
+  record: ^5.1.1
+  just_audio: ^0.9.38
+  intl_phone_field: ^3.2.0
+
+  # UI Design
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.10+1
+  cupertino_icons: ^1.0.8
+  connectivity_plus: ^7.0.0
+  csv: ^7.2.0
+  package_info_plus: ^9.0.0
+  flutter_local_notifications: ^21.0.0
+  firebase_storage: ^12.4.10
+  timezone: ^0.11.0
+  firebase_crashlytics: ^4.3.2
+  fl_chart: ^0.70.2
+  flutter_image_compress: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Code Generation
+  build_runner: ^2.4.9
+  riverpod_generator: ^2.4.0
+  drift_dev: ^2.16.0
+
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.14.3
+  flutter_native_splash: ^2.4.6
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icon/
+
+dependency_overrides:
+  record_linux:
+    path: ./record_linux_stub
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: 'assets/icon/app_icon.png'
+  background_color_android: '#0F1117'
+  theme_color_android: '#ec5b13'
+  min_sdk_android: 21
+
+flutter_native_splash:
+  color: '#0F1117'
+  image: assets/icon/app_icon.png
+  android: true
+  ios: true
