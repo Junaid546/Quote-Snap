@@ -47,7 +47,11 @@ app.*.map.json
 .packages
 *.g.dart
 *.freezed.dart
+# Firebase secrets - never commit
+lib/firebase_options.dart
 android/app/google-services.json
+ios/GoogleService-Info.plist
+lib/secrets.dart
 android/.gradle/
 android/local.properties
 android/key.properties
